@@ -94,7 +94,92 @@ const AddProduct = () => {
 
     return (
         <>
-           
+            <section className="p-6 bg-gray-800 text-gray-50 w-[100%] justify-center lg:flex mt-16">
+
+
+                <form onSubmit={addServiceSubmitBtn} className=" w-[100%] lg:w-[50%] ">
+                    <div className="">
+                        <div className='flex'> <div onClick={back} className="w-16 bg-amber-600 flex py-1 cursor-pointer ">
+                            <span className='px-1 mt-1'><FaAngleDoubleLeft></FaAngleDoubleLeft></span> <h1>Back</h1></div> </div>
+                        <h1 className="text-center text-yellow-500 text-2xl"><span className='text-red-500'>As a Seller </span> Add Product</h1>
+                    </div>
+                    <div className="grid lg:grid-cols-1 grid-cols-1 ">
+                        <div className="col-span-full sm:col-span-3">
+                            <label htmlFor="firstname" className="text-sm">Selar Name</label>
+                            <input onBlur={heldeleOnBlure} defaultValue={user?.displayName} disabled id="firstname" name='Seller name' type="text" placeholder="First name" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-white py-2 placeholder:px-5 placeholder:text-black px-3" required />
+                        </div>
+                        <br />
+                        <div className="col-span-full sm:col-span-3">
+                            <label htmlFor="email" className="text-sm">Seller Email</label>
+                            <input onBlur={heldeleOnBlure} defaultValue={user?.email} id="email" name='email' disabled type="email" placeholder="Email" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 text-white py-2 placeholder:px-5 placeholder:text-black px-3" required />
+                        </div>
+                        <br></br>
+                        <div className="col-span-full sm:col-span-3">
+                            <label htmlFor="email" className="text-sm">Car Model</label>
+                            <input onBlur={heldeleOnBlure} id="rating" name='model' type="text" placeholder="input model no" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 text-black py-2 placeholder:px-5 placeholder:text-black px-3" required />
+                        </div>
+                        <br></br>
+                        <div className="col-span-full sm:col-span-3">
+                            <label htmlFor="email" className="text-sm">Car Details</label>
+                            <input onBlur={heldeleOnBlure} id="rating" name='title' type="text" placeholder="describe about your car" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 text-black py-2 placeholder:px-5 placeholder:text-black px-3" required />
+                        </div>
+                        {/* -----img */}
+                        <br></br>
+                        <div className="col-span-full sm:col-span-3">
+                            <label htmlFor="email" className="text-sm">Car Image. suggess <span className='text-red-500'>imagebb.com</span> photo link.</label>
+                            <input onBlur={heldeleOnBlure} id="photo" name='photo' type="text" placeholder="Car Brand photo" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 text-black py-2 placeholder:px-5 placeholder:text-black px-3" required />
+                        </div>
+                        {/* --price */}
+                        <br></br>
+                        <div className="col-span-full sm:col-span-3">
+                            <label htmlFor="email" className="text-sm">Car Orginal Marken price</label>
+                            <input onBlur={heldeleOnBlure} id="rating" name='ResellPrice' type="text" placeholder="Car Orginal price" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 text-black py-2 placeholder:px-5 placeholder:text-black px-3" required />
+                        </div>
+                        <br></br>
+                        <div className="col-span-full sm:col-span-3">
+                            <label htmlFor="email" className="text-sm">Car Resale Price</label>
+                            <input onBlur={heldeleOnBlure} id="orginalPrice" name='price' type="text" placeholder="Car Resale price" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 text-black py-2 placeholder:px-5 placeholder:text-black px-3" required />
+                        </div>
+                        {/* --rating */}
+                        <br></br>
+                        <div className="col-span-full sm:col-span-3">
+                            <label htmlFor="email" className="text-sm">Post Date</label>
+                            <input onBlur={heldeleOnBlure} id="rating" name='Date' type="text" placeholder="Post Date" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 text-black py-2 placeholder:px-5 placeholder:text-black px-3" required />
+                        </div>
+                        <br></br>
+                        <div className="col-span-full sm:col-span-3">
+                            <label htmlFor="email" className="text-sm">Location</label>
+                            <input onBlur={heldeleOnBlure} id="rating" name='location' type="text" placeholder="Location" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 text-black py-2 placeholder:px-5 placeholder:text-black px-3" required />
+                        </div>
+                        <br></br>
+                        <div className="col-span-full sm:col-span-3">
+                            <label htmlFor="email" className="text-sm">phone</label>
+                            <input onBlur={heldeleOnBlure} id="rating" name='phone' type="text" placeholder="give your phone number" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 text-black py-2 placeholder:px-5 placeholder:text-black px-3" required />
+                        </div>
+                        {/* --service id */}
+                        <br></br>
+                        <div className="col-span-full sm:col-span-3">
+                            <label htmlFor="email" className="text-sm">Choices Product Id : Tesla: 2, Rose: 1, BMW: 3  </label>
+                            <input onBlur={heldeleOnBlure} id="serial-id" name='serialId' type="number" placeholder="product Id" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 text-black py-2 placeholder:px-5 placeholder:text-black px-3" required />
+                        </div>
+                        <br></br>
+                        <div className="col-span-full sm:col-span-3">
+                            <label htmlFor="email" className="text-sm">Message</label>
+                            <textarea name='message' className="textarea textarea-secondary w-full text-black" placeholder="tell about somethings" required></textarea>
+                        </div>
+
+                    </div>
+                    <br></br>
+                    <div className="col-span-full sm:col-span-3">
+                        <button type='submit' className='w-32 mx-auto  py-2 bg-yellow-500 text-black hover:bg-amber-500 rounded-lg '>Submit</button>
+                    </div>
+
+
+
+
+
+                </form>
+            </section>
         </>
     );
 };
